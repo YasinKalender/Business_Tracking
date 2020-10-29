@@ -1,0 +1,82 @@
+﻿@model List<JobsListDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Member/Views/Shared/_MemberLayout.cshtml";
+
+    int index = 0;
+
+}
+
+<h3 class="text-center mt-3 mb-3">Gelen iş Emirleri</h3>
+
+@foreach (var item in Model)
+{
+
+    index++;
+
+<div class="card">
+    <h5 class="card-title">@item.Urgency.Name</h5>
+    <div class="card-body">
+        <h5 class="card-title">@item.Name</h5>
+        <p class="card-text">@item.Description</p>
+
+        @if (item.Rapors.Count > 0)
+        {
+            <p>
+                <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample-@index" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    Raporlara git
+                </a>
+
+            </p>
+            <div class="collapse" id="collapseExample-@index">
+                <a asp-action="AddRapor" asp-route-id="@item.ID">Rapor yaz</a>
+                <div class="card card-body">
+
+                    <table class="table">
+
+                        <thead>
+
+                            <tr>
+                                <th>İş Açıklaması</th>
+                                <th>İş Detayı</th>
+                                <th></th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            @foreach (var rapor in item.Rapors)
+                            {
+
+                                <tr>
+
+                                    <td>@rapor.Description</td>
+                                    <td>@rapor.Details</td>
+                                    <td><a asp-action="UpdateRapor" asp-route-id="@rapor.ID">Düzenle</a></td>
+
+                                </tr>
+                            }
+
+
+                        </tbody>
+
+
+                    </table>
+                </div>
+            </div>
+
+
+        }
+
+        <a asp-action="EndDuty" asp-route-id="@item.ID">Tamamlandı olarak işaretle</a>
+
+    </div>
+</div>
+
+
+}
+
+
+

@@ -1,0 +1,93 @@
+﻿@model List<JobsListDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>İş Listesi</h1>
+
+@if (Model.Count != 0)
+{
+    <table class="table table-bordered">
+
+        <thead>
+
+            <tr>
+                <th>İş Emri</th>
+                <th>İş Açıklaması</th>
+                <th>İş Detayı</th>
+                <th>Kullanıcı</th>
+                <th>Aciliyet durumu</th>
+                <th>Rapor</th>
+                <th></th>
+
+
+            </tr>
+
+
+        </thead>
+
+
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.Description</td>
+                    <td>@item.Details</td>
+                    <td>
+                        @if (item.AppUser != null)
+                        {
+                            <span class="badge badge-success">@item.AppUser.FirstName çalışıyor</span>
+                        }
+
+                        else
+                        {
+                            <span class="badge badge-danger">Aktif Kullanıcı yoktur</span>
+                        }
+                                    </td>
+
+                    <td>@item.Urgency.Name</td>
+                    <td>@item.Rapors.Count()</td>
+                    <td>
+
+                        @if (item.AppUser != null)
+                        {
+                            <a asp-action="DetailsRapor" asp-route-id="@item.ID" class="btn btn-primary">Detay Göster</a>
+                        }
+
+                        else
+                        {
+
+                            <a asp-area="Admin" asp-controller="JobsDuty" asp-action="MissionJob" asp-route-id="@item.ID" class="btn btn-primary">Görevlendir</a>
+                        }
+
+
+                    </td>
+
+
+                </tr>
+            }
+
+
+
+
+        </tbody>
+
+
+
+
+
+
+
+    </table>
+
+
+
+}
+
+else
+{
+    <p class="text-center lead">Çalışan Personel Yoktur</p>
+}
+

@@ -1,0 +1,25 @@
+﻿@model Business_Tracking.Entities.ORM.Concrete.AppUser
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+<div class="bg-light border-right" id="sidebar-wrapper">
+    <img src="~/wwwroot/img/@Model.Image" />
+    <div class="list-group list-group-flush">
+
+        <a asp-area="Member" asp-controller="Jobs" asp-action="Index" class="list-group-item list-group-item-action bg-light">Gelen İş İşlemleri</a>
+        <a asp-area="Member" asp-controller="Jobs" asp-action="EndDutyList" class="list-group-item list-group-item-action bg-light">Tamamladığım İşler</a>
+
+        <a asp-area="Member" asp-controller="Notification" asp-action="Index" class="list-group-item list-group-item-action bg-light position-relative">
+
+            @if (ViewBag.notifications > 0)
+            {
+                <sub class="badge badge-success position-absolute mb-1 mr-3">@ViewBag.notifications</sub>
+
+            }
+            Bildirimler
+        </a>
+        <a asp-area="Member" asp-controller="Profile" asp-action="Index" class="list-group-item list-group-item-action bg-light">Profile</a>
+        <a asp-area="" asp-controller="Home" asp-action="Logout" class="list-group-item list-group-item-action bg-light">Çıkış Yap</a>
+    </div>
+</div>

@@ -1,0 +1,66 @@
+﻿@model AppUserLoginDto
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <title>Register</title>
+</head>
+<body>
+    @using (Html.BeginForm("Login", "Home",FormMethod.Post))
+    {
+        <div asp-validation-summary="All"></div>
+        <div class="container">
+
+
+            <div class="form-group">
+
+                <label asp-for="username"></label>
+                <input type="text" asp-for="username" class="form-control" />
+                <span asp-validation-for="username" class="text-danger"></span>
+
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label asp-for="password"></label>
+                <input type="text" asp-for="password" class="form-control" />
+                <span asp-validation-for="password" class="text-danger"></span>
+
+
+            </div>
+
+            <div class="form-check">
+
+                <label asp-for="rememberMe"></label>
+                <input type="checkbox" asp-for="rememberMe" class="form-check" />
+
+
+
+            </div>
+
+            <button type="submit" class="btn btn-primary">Giriş Yap</button>
+
+
+
+
+        </div>
+
+
+
+    }
+
+    <script src="~/twitter-bootstrap/js/bootstrap.js"></script>
+    <script src="~/twitter-bootstrap/Theme/startbootstrap-simple-sidebar-gh-pages/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="~/validate-js/validate.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+﻿@model AppUserUpdateDto
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Member/Views/Shared/_MemberLayout.cshtml";
+}
+
+@using (Html.BeginForm("Index", "Profile", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+
+    @Html.AntiForgeryToken()
+    <input type="hidden" name="Id" value="@Model.Id" />
+
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div class="form-group">
+        <label asp-for="FirstName"></label>
+        <input type="text" asp-for="FirstName" class="form-control" />
+
+
+    </div>
+
+    <div class="form-group">
+        <label asp-for="LastName"></label>
+        <input type="text" asp-for="LastName" class="form-control" />
+
+
+    </div>
+
+
+    <div class="form-group">
+        <label asp-for="email"></label>
+        <input type="text" asp-for="email" class="form-control" />
+
+
+    </div>
+
+    <div class="form-group">
+        <label asp-for="username"></label>
+        <input type="text" asp-for="username" class="form-control" />
+
+
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>Şu anki resminiz</label>
+                <img src="~/img/@Model.Image" />
+
+
+            </div>
+
+
+        </div>
+
+        <div id="CImage" style="display:none;">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Seçtiğiniz resim:</label>
+                    <img id="imagegöster" src="~/wwwroot/img/@Model.Image" />
+
+
+
+
+                </div>
+            </div>
+
+        </div>
+
+        <input type="file" asp-for="Image" id="Image" />
+
+
+
+
+    </div>
+
+
+
+    <button type="submit" class="btn btn-primary">Güncelle</button>
+
+
+
+
+}
+
+@section Javascript{
+
+    <script>
+
+        $(document).ready(function () {
+
+            $('#Image').change(function (e) {
+
+
+                $('#CImage').show();
+                $('#imagegöster').attr('src', URL.createObjectURL(e.target.files[0]))
+            });
+
+
+
+        });
+
+
+
+    </script>
+
+
+
+}
+
+

@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Areas\Member\Models\" />
+    <Folder Include="Models\" />
+    <Folder Include="wwwroot\twitter-bootstrap\Theme\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.7">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Business_Tracking.Business\Business_Tracking.Business.csproj" />
+  </ItemGroup>
+
+</Project>

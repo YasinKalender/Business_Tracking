@@ -1,0 +1,40 @@
+﻿@model List<Jobs>
+@{
+    ViewData["Title"] = "EndDutyList";
+    Layout = "~/Areas/Member/Views/Shared/_MemberLayout.cshtml";
+}
+
+<h1>Tamamladığım İşler</h1>
+
+@foreach (var item in Model)
+{
+
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">@item.Name</h5>
+            <p class="card-text">@item.Description</p>
+
+        </div>
+    </div>
+
+}    <ul class="pagination">
+
+    @for (int i = 1; i <= ViewBag.sumpage; i++)
+    {
+
+
+        <li class="page-item"><a class="page-link" asp-action="EndDutyList" asp-route-activepage="@i">@i</a></li>
+
+
+    }
+
+</ul>
+
+
+
+    -
+
+
+
+
+

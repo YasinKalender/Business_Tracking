@@ -1,0 +1,32 @@
+﻿@model UrgencyAddUpdateDto
+@{
+    ViewData["Title"] = "UrgencyUpdate";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Urgency Update</h1>
+
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="form-group">
+
+        <label asp-for="Name">Name</label>
+        <input type="text" asp-for="Name" class="form-control" />
+        <span class="text-danger" asp-validation-for="Name"></span>
+
+
+    </div>
+
+    <input type="hidden" asp-for="ID" value="@Model.ID" />
+
+    <button type="submit" class="btn btn-primary">Güncelle</button>
+
+
+
+
+
+}
+

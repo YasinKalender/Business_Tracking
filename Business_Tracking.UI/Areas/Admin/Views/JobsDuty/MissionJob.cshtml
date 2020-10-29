@@ -1,0 +1,97 @@
+﻿@model JobsListDto
+@{
+    ViewData["Title"] = "MissionJob";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+
+    string s = (string)ViewBag.aranan;
+}
+
+<h1>Mission Job</h1>
+
+@if (!string.IsNullOrWhiteSpace(s))
+{
+    <div class="border border-dark">@s için arama yaptınız <a asp-action="MissionJob" asp-route-id="@Model.ID">Filtreyi kaldır</a></div>
+}
+
+<form  method="get" asp-action="MissionJob">
+    <input type="text" name="s" class="form-control" />
+    <button type="submit" class="btn btn-primary">Ara</button>
+
+
+
+</form>
+<div class="row">
+
+    <div class="col-md-6">
+
+        <div class="card">
+
+            <div class="card-body">
+                <h5 class="card-title">İş Emri: @Model.Name</h5>
+                <p class="card-text">İş Açıklaması @Model.Description</p>
+                <span class="badge badge-dark">Aciliyet Durumu: @Model.Urgency.Name</span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col-md-6">
+
+
+
+        @foreach (var item in (List<AppUser>)ViewBag.notadmin)
+        {
+
+
+            <div class="card">
+                <img class="card-img-top" src="~/wwwroot/image/@item.Image" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">(@item.FirstName+''+@item.LastName)</h5>
+                    <p><JobsWithUser  app-user-id="@item.Id"></JobsWithUser></p>
+                </div>
+
+                <a asp-action="AppUserJobs" asp-route-AppUserID="@item.Id" asp-route-JobsID="@Model.ID" class="btn btn-primary">Görevlendir</a>
+            </div>
+
+        }
+
+        <nav aria-label="Page navigation example">
+
+
+            <ul class="pagination">
+
+                @if (!string.IsNullOrWhiteSpace(s))
+                {
+
+                    @for (int i = 1; i <= ViewBag.sumpage; i++)
+                    {
+                        <li class="page-item"><a class="page-link" asp-action="MissionJob" asp-route-id="@Model.ID" asp-route-page="@i" asp-route-s="@s">@i</a></li>
+                    }
+                }
+
+                else
+                {
+                    @for (int i = 1; i <= ViewBag.sumpage; i++)
+                    {
+                        <li class="page-item"><a class="page-link" asp-action="MissionJob" asp-route-id="@Model.ID" asp-route-page="@i">@i</a></li>
+                    }
+                }
+
+
+            </ul>
+        </nav>
+
+
+
+
+
+
+
+    </div>
+
+
+
+</div>
+
+
+

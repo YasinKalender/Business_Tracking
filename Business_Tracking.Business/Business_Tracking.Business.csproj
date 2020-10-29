@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Business_Tracking.DAL\Business_Tracking.DAL.csproj" />
+    <ProjectReference Include="..\Business_Tracking.DTOs\Business_Tracking.DTOs.csproj" />
+    <ProjectReference Include="..\Business_Tracking.Repository\Business_Tracking.Repository.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" Version="9.2.0" />
+    <PackageReference Include="NLog" Version="4.7.4" />
+    <PackageReference Include="NLog.Config" Version="4.7.4" />
+  </ItemGroup>
+
+</Project>

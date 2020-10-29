@@ -1,0 +1,68 @@
+﻿@model JobsAddUpdateDto
+@{
+    ViewData["Title"] = "JobsAdd";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Jobs Add</h1>
+
+@using (Html.BeginForm())
+{
+
+    @Html.AntiForgeryToken()
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div class="form-group">
+
+        <label asp-for="Name">Name</label>
+        <input type="text" asp-for="Name" class="form-control">
+
+
+    </div>
+
+    <div class="form-group">
+
+        <label asp-for="Description">Description</label>
+        <input type="text" asp-for="Description" class="form-control">
+
+    </div>
+
+    <div class="form-group">
+
+        <label asp-for="Details">Details</label>
+        <input type="text" asp-for="Details" class="form-control">
+
+    </div>
+
+    <div class="form-group">
+        @*Aciliyet Seçiniz
+        <select asp-for="UrgencyID" class="form-control">
+
+            @foreach (var item in (List<SelectListItem>)ViewBag.urgency)
+            {
+                <option value="@item.Value">@item.Text</option>
+            }
+
+
+        </select>*@
+
+        <label>Aciliyet Durumu Seçiniz</label>
+        <select asp-for="UrgencyID" class="form-control" asp-items="ViewBag.urgen ">
+
+            
+            <option value="-1">Seçiniz</option>
+
+        </select>
+
+    </div>
+
+    <button type="submit" class="btn btn-primary">Görev Ekle</button>
+
+
+
+
+
+
+
+}
+

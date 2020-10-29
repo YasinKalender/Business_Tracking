@@ -1,0 +1,24 @@
+C:\Users\YASIN\Desktop\.Net Core\Business_Tracking\Business_Tracking.Map\bin\Debug\netcoreapp3.1\Business_Tracking.Map.deps.json
+C:\Users\YASIN\Desktop\.Net Core\Business_Tracking\Business_Tracking.Map\bin\Debug\netcoreapp3.1\Business_Tracking.Map.dll
+C:\Users\YASIN\Desktop\.Net Core\Business_Tracking\Business_Tracking.Map\bin\Debug\netcoreapp3.1\Business_Tracking.Map.pdb
+C:\Users\YASIN\Desktop\.Net Core\Business_Tracking\Business_Tracking.Map\bin\Debug\netcoreapp3.1\Business_Tracking.Entities.dll
+C:\Users\YASIN\Desktop\.Net Core\Business_Tracking\Business_Tracking.Map\bin\Debug\netcoreapp3.1\Business_Tracking.Entities.pdb
+C:\Users\YASIN\Desktop\.Net Core\Business_Tracking\Business_Tracking.Map\obj\Debug\netcoreapp3.1\Business_Tracking.Map.csprojAssemblyReference.cache
+C:\Users\YASIN\Desktop\.Net Core\Business_Tracking\Business_Tracking.Map\obj\Debug\netcoreapp3.1\Business_Tracking.Map.AssemblyInfoInputs.cache
+C:\Users\YASIN\Desktop\.Net Core\Business_Tracking\Business_Tracking.Map\obj\Debug\netcoreapp3.1\Business_Tracking.Map.AssemblyInfo.cs
+C:\Users\YASIN\Desktop\.Net Core\Business_Tracking\Business_Tracking.Map\obj\Debug\netcoreapp3.1\Business_Tracking.Map.csproj.CoreCompileInputs.cache
+C:\Users\YASIN\Desktop\.Net Core\Business_Tracking\Business_Tracking.Map\obj\Debug\netcoreapp3.1\Business_Tracking.Map.csproj.CopyComplete
+C:\Users\YASIN\Desktop\.Net Core\Business_Tracking\Business_Tracking.Map\obj\Debug\netcoreapp3.1\Business_Tracking.Map.dll
+C:\Users\YASIN\Desktop\.Net Core\Business_Tracking\Business_Tracking.Map\obj\Debug\netcoreapp3.1\Business_Tracking.Map.pdb
+C:\Users\ysnbj\Desktop\Business_Tracking\Business_Tracking.Map\bin\Debug\netcoreapp3.1\Business_Tracking.Map.deps.json
+C:\Users\ysnbj\Desktop\Business_Tracking\Business_Tracking.Map\bin\Debug\netcoreapp3.1\Business_Tracking.Map.dll
+C:\Users\ysnbj\Desktop\Business_Tracking\Business_Tracking.Map\bin\Debug\netcoreapp3.1\Business_Tracking.Map.pdb
+C:\Users\ysnbj\Desktop\Business_Tracking\Business_Tracking.Map\bin\Debug\netcoreapp3.1\Business_Tracking.Entities.dll
+C:\Users\ysnbj\Desktop\Business_Tracking\Business_Tracking.Map\bin\Debug\netcoreapp3.1\Business_Tracking.Entities.pdb
+C:\Users\ysnbj\Desktop\Business_Tracking\Business_Tracking.Map\obj\Debug\netcoreapp3.1\Business_Tracking.Map.csprojAssemblyReference.cache
+C:\Users\ysnbj\Desktop\Business_Tracking\Business_Tracking.Map\obj\Debug\netcoreapp3.1\Business_Tracking.Map.AssemblyInfoInputs.cache
+C:\Users\ysnbj\Desktop\Business_Tracking\Business_Tracking.Map\obj\Debug\netcoreapp3.1\Business_Tracking.Map.AssemblyInfo.cs
+C:\Users\ysnbj\Desktop\Business_Tracking\Business_Tracking.Map\obj\Debug\netcoreapp3.1\Business_Tracking.Map.csproj.CoreCompileInputs.cache
+C:\Users\ysnbj\Desktop\Business_Tracking\Business_Tracking.Map\obj\Debug\netcoreapp3.1\Business_Tracking.Map.csproj.CopyComplete
+C:\Users\ysnbj\Desktop\Business_Tracking\Business_Tracking.Map\obj\Debug\netcoreapp3.1\Business_Tracking.Map.dll
+C:\Users\ysnbj\Desktop\Business_Tracking\Business_Tracking.Map\obj\Debug\netcoreapp3.1\Business_Tracking.Map.pdb

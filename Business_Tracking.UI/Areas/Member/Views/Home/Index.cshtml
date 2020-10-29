@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Member/Views/Shared/_MemberLayout.cshtml";
+}
+
+<div class="card" style="width:100px; background-color:darkblue">
+    <div class="card-body">
+        <h5 class="card-title">Rapor sayısı: @ViewBag.rapor </h5>
+    </div>
+</div>
+
+<div class="card" style="width:100px; background-color:darkblue">
+    <div class="card-body">
+        <h5 class="card-title">Tamamladığım iş sayısı: @ViewBag.jobs </h5>
+    </div>
+</div>
+
+<div class="card" style="width:100px; background-color:darkblue">
+    <div class="card-body">
+        <h5 class="card-title">Aktif iş sayısı: @ViewBag.notjobs </h5>
+    </div>
+</div>
+
+<div class="card" style="width:100px; background-color:darkblue">
+    <div class="card-body">
+        <h5 class="card-title">Bildirim sayısı: @ViewBag.notifications</h5>
+    </div>
+</div>
+

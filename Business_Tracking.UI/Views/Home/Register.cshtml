@@ -1,0 +1,83 @@
+﻿@model AppUserRegisterDto
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <title>Register</title>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        <div asp-validation-summary="All"></div>
+        <div class="container">
+
+            <div class="form-group">
+
+                <label asp-for="FirstName"></label>
+                <input type="text" asp-for="FirstName" class="form-control" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+
+
+            </div>
+
+            <div class="form-group">
+
+                <label asp-for="LastName"></label>
+                <input type="text" asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+
+
+            </div>
+
+            <div class="form-group">
+
+                <label asp-for="email"></label>
+                <input type="text" asp-for="email" class="form-control" />
+                <span asp-validation-for="email" class="text-danger"></span>
+
+
+            </div>
+
+            <div class="form-group">
+
+                <label asp-for="username"></label>
+                <input type="text" asp-for="username" class="form-control" />
+                <span asp-validation-for="username" class="text-danger"></span>
+
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label asp-for="password"></label>
+                <input type="text" asp-for="password" class="form-control" />
+                <span asp-validation-for="password" class="text-danger"></span>
+
+
+            </div>
+
+            <button type="submit" class="btn btn-primary">Kayıt ol</button>
+
+
+
+
+        </div>
+
+
+
+    }
+
+    <script src="~/twitter-bootstrap/js/bootstrap.js"></script>
+    <script src="~/twitter-bootstrap/Theme/startbootstrap-simple-sidebar-gh-pages/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="~/validate-js/validate.js"></script>
+
+
+</body>
+</html>

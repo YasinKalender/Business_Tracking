@@ -1,0 +1,23 @@
+﻿@model List<Notification>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Member/Views/Shared/_MemberLayout.cshtml";
+}
+
+@foreach (var item in Model)
+{
+    @using (Html.BeginForm())
+    {
+
+        <input type="hidden" name="ID" value="@item.ID" />
+        <p>@item.Description</p>
+        <button type="submit" class="btn btn-primary">okundu</button>
+        <hr />
+
+
+
+
+
+    }
+}
+

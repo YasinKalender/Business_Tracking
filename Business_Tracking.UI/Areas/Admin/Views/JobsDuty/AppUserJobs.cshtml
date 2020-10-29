@@ -1,0 +1,40 @@
+﻿@model Business_Tracking.DTOs.DTOs.AppUserDto.JobsAppUserListDto
+@{
+    ViewData["Title"] = "AppUserJobs";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Görevlendir</h1>
+
+@using (Html.BeginForm("MissionJob", "JobsDuty", FormMethod.Post))
+{
+    <input type="hidden" name="AppUserID" value="@Model.AppUser.Id" />
+    <input type="hidden" name="JobsID" value="@Model.Jobs.ID" />
+
+    <p>@Model.AppUser.FirstName kişisini görevlendirmek istiyor musunuz? </p>
+    <button asp-action="MissionJob" asp-route-id="@Model.Jobs.ID" type="submit" class="btn btn-primary">Görevlendir</button>
+
+
+
+}
+
+<div class="card">
+    <img class="card-img-top" src="~/wwwroot/image/@Model.AppUser.Image" alt="Card image cap">
+    <div class="card-body">
+        <h5 class="card-title">(@Model.AppUser.FirstName+''+@Model.AppUser.LastName)</h5>
+    </div>
+
+
+</div>
+
+
+
+<div class="card">
+
+    <div class="card-body">
+        <h5 class="card-title">İş Emri: @Model.Jobs.Name</h5>
+        <p class="card-text">İş Açıklaması @Model.Jobs.Description</p>
+        <span class="badge badge-dark">Aciliyet Durumu: @Model.Jobs.Urgency.Name</span>
+    </div>
+</div>
+

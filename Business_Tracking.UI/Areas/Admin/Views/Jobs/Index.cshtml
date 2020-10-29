@@ -1,0 +1,139 @@
+﻿@model List<JobsListDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+@Html.ActionLink("İş Ekle", "JobsAdd", "Jobs", new { @class = "btn btn-primary" })
+@if (Model.Count != 0)
+{
+
+    <table class="table table-bordered">
+
+        <thead>
+
+            <tr>
+
+                <th>İş Adı</th>
+                <th>İş Açıklama</th>
+                <th>İş Detayı</th>
+                <th>Aciliyet Durumu</th>
+                <th colspan="2"></th>
+
+
+            </tr>
+
+
+
+        </thead>
+
+        <tbody>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.Description</td>
+                    <td>@item.Details</td>
+                    <td>@item.Urgency.Name</td>
+                    <td><a asp-area="Admin" asp-controller="Jobs" asp-action="JobsUpdate" asp-route-id="@item.ID" class="btn btn-primary">Görev Güncelle</a></td>
+                    <td><a href="" data-toggle="modal" data-target="#silekran" data-yasko="@item.ID" class="btn btn-danger">Sil</a></td>
+
+
+                </tr>
+            }
+
+
+        </tbody>
+
+
+
+
+
+    </table>
+}
+
+else
+{
+    <p class="lead text-center">Kayıtlı iş bulunamamıştır</p>
+}
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="silekran" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Silmek istediğinizden emin misiniz ?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" id="btnsil" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Javascript{
+
+    <script>
+
+        $(document).ready(function () {
+
+            $("#silekran").on("show.bs.modal", function (event) {
+
+                let element = $(event.relatedTarget);
+                let id = element.data("yasko");
+
+                $("#btnsil").click(function () {
+                    $.ajax({
+                        type: "Get",
+                        url: "./Jobs/JobDelete",
+                        data: { id: id },
+                        dataType:"json",
+                        contentType: "application/json",
+
+                        success: function () {
+
+                            window.location.reload();
+
+                        },
+
+                        error: function (error) {
+
+                            alert(error.statusText)
+
+                        }
+
+
+
+                    });
+
+
+                });
+
+
+
+            });
+
+
+
+        });
+
+
+
+    </script>
+
+
+
+}
+
+
+

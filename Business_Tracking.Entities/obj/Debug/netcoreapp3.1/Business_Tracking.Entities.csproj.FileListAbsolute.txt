@@ -1,0 +1,16 @@
+C:\Users\YASIN\Desktop\.Net Core\Business_Tracking\Business_Tracking.Entities\bin\Debug\netcoreapp3.1\Business_Tracking.Entities.deps.json
+C:\Users\YASIN\Desktop\.Net Core\Business_Tracking\Business_Tracking.Entities\bin\Debug\netcoreapp3.1\Business_Tracking.Entities.dll
+C:\Users\YASIN\Desktop\.Net Core\Business_Tracking\Business_Tracking.Entities\bin\Debug\netcoreapp3.1\Business_Tracking.Entities.pdb
+C:\Users\YASIN\Desktop\.Net Core\Business_Tracking\Business_Tracking.Entities\obj\Debug\netcoreapp3.1\Business_Tracking.Entities.AssemblyInfoInputs.cache
+C:\Users\YASIN\Desktop\.Net Core\Business_Tracking\Business_Tracking.Entities\obj\Debug\netcoreapp3.1\Business_Tracking.Entities.AssemblyInfo.cs
+C:\Users\YASIN\Desktop\.Net Core\Business_Tracking\Business_Tracking.Entities\obj\Debug\netcoreapp3.1\Business_Tracking.Entities.csproj.CoreCompileInputs.cache
+C:\Users\YASIN\Desktop\.Net Core\Business_Tracking\Business_Tracking.Entities\obj\Debug\netcoreapp3.1\Business_Tracking.Entities.dll
+C:\Users\YASIN\Desktop\.Net Core\Business_Tracking\Business_Tracking.Entities\obj\Debug\netcoreapp3.1\Business_Tracking.Entities.pdb
+C:\Users\ysnbj\Desktop\Business_Tracking\Business_Tracking.Entities\bin\Debug\netcoreapp3.1\Business_Tracking.Entities.deps.json
+C:\Users\ysnbj\Desktop\Business_Tracking\Business_Tracking.Entities\bin\Debug\netcoreapp3.1\Business_Tracking.Entities.dll
+C:\Users\ysnbj\Desktop\Business_Tracking\Business_Tracking.Entities\bin\Debug\netcoreapp3.1\Business_Tracking.Entities.pdb
+C:\Users\ysnbj\Desktop\Business_Tracking\Business_Tracking.Entities\obj\Debug\netcoreapp3.1\Business_Tracking.Entities.AssemblyInfoInputs.cache
+C:\Users\ysnbj\Desktop\Business_Tracking\Business_Tracking.Entities\obj\Debug\netcoreapp3.1\Business_Tracking.Entities.AssemblyInfo.cs
+C:\Users\ysnbj\Desktop\Business_Tracking\Business_Tracking.Entities\obj\Debug\netcoreapp3.1\Business_Tracking.Entities.csproj.CoreCompileInputs.cache
+C:\Users\ysnbj\Desktop\Business_Tracking\Business_Tracking.Entities\obj\Debug\netcoreapp3.1\Business_Tracking.Entities.dll
+C:\Users\ysnbj\Desktop\Business_Tracking\Business_Tracking.Entities\obj\Debug\netcoreapp3.1\Business_Tracking.Entities.pdb

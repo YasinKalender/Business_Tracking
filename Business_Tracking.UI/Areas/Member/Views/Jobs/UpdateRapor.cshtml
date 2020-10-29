@@ -1,0 +1,45 @@
+﻿@model RaporsAddViewModel
+@{
+    ViewData["Title"] = "UpdateRapor";
+    Layout = "~/Areas/Member/Views/Shared/_MemberLayout.cshtml";
+}
+
+<h1>Update Rapor</h1>
+
+@using (Html.BeginForm())
+{
+
+
+
+
+    <input type="hidden" asp-for="ID" />
+    <input type="hidden" asp-for="JobsID" />
+
+
+    <div class="form-group">
+
+        <label asp-for="Description"></label>
+        <input type="text" asp-for="Description" class="form-control" />
+
+
+    </div>
+
+    <div class="form-group">
+
+        <label asp-for="Details"></label>
+        <input type="text" asp-for="Details" class="form-control" />
+
+
+    </div>
+
+    <button type="submit" class="btn btn-primary">Rapor Güncelle</button>
+
+
+
+
+
+
+
+
+}
+
